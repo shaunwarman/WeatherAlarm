@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp" >
+
+
+    <Button
+        android:id="@+id/create_alarm_button"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@drawable/ic_action_add_alarm"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="showAlarm"
+        android:text="@string/create_alarm"
+        android:textSize="26sp" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="?android:attr/dividerHorizontal"
+        android:layout_below="@id/create_alarm_button"/>
+
+    <com.example.weatheralarm.MyListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:drawSelectorOnTop="false"
+        android:layout_below="@id/create_alarm_button" />
+
+</RelativeLayout>

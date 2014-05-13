@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:scrollbars="vertical">
+
+    <!-- Make sure volume (seek bar) is above set button -->
+
+    <TimePicker
+        android:id="@+id/time_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:id="@+id/days_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time_picker"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/sunday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="setSunday"
+            android:text="@string/sunday" />
+
+        <Button
+            android:id="@+id/monday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="setMonday"
+            android:text="@string/monday" />
+
+        <Button
+            android:id="@+id/tuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="setTuesday"
+            android:text="@string/tuesday" />
+
+        <Button
+            android:id="@+id/wednesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="setWednesday"
+            android:text="@string/wednesday" />
+
+        <Button
+            android:id="@+id/thursday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="setThursday"
+            android:text="@string/thursday" />
+
+        <Button
+            android:id="@+id/friday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="setFriday"
+            android:text="@string/friday" />
+
+        <Button
+            android:id="@+id/saturday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="setSaturday"
+            android:text="@string/saturday" />
+    </LinearLayout>
+    
+    
+    <CheckBox
+        android:id="@+id/precipitation_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_below="@+id/days_list"
+        android:onClick="setPrecipitation"
+        android:text="@string/precipitation_text"
+        android:textSize="16dip" />
+
+
+    <CheckBox
+        android:id="@+id/hourly_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/precipitation_checkbox"
+        android:onClick="setHourly"
+        android:text="@string/hourly_text"
+        android:textSize="16dip" />
+    
+    <CheckBox
+        android:id="@+id/repeat_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hourly_checkbox"
+        android:onClick="setRepeat"
+        android:text="@string/repeat_text"
+        android:textSize="16dip" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="4dip"
+            android:layout_marginRight="4dip"
+            android:background="?android:attr/dividerVertical"
+            android:layout_alignParentTop="true"/>
+        <View
+            android:id="@+id/ViewColorPickerHelper"
+            android:layout_width="1dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="4dip"
+            android:layout_marginTop="4dip"
+            android:background="?android:attr/dividerVertical"
+            android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/set_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/ViewColorPickerHelper"
+        android:onClick="setAlarm"
+        android:text="@string/set_alarm_text"
+        android:textSize="15sp"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:onClick="cancelAlarm"
+        android:text="@string/cancel_alarm_text"
+        android:textSize="15sp"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/ViewColorPickerHelper"/>
+     </RelativeLayout>
+
+</RelativeLayout>
